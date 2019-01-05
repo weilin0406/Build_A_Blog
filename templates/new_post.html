@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-{% for post in posts %}
 <form action="/newpost" method="POST">
     <h1>build a blog</h1>
     <label>
@@ -11,12 +10,10 @@
     <p class="error">{{title_error}} &nbsp;</p>
     <label>
         <span class="form_label">Your new blog:</span>
-        <textarea name="blog_post" type="textarea" rows="10" cols="100">{{post_entry}}</textarea>
+        <textarea name="blog_post" type="textarea" rows="10" cols="50">{{post_entry}}</textarea>
     </label>
     <p class="error">{{blog_entry_error}} &nbsp;</p>
     <input class="submit" type="submit" value="Add Entry" />   
 </form>
 
-
-{% endfor %} 
 {% endblock %} 
